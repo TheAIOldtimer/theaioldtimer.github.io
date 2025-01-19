@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The AI Oldtimer - Making AI Accessible for Everyone. Learn about AI, its applications, and how it can benefit you.">
+    <meta name="keywords" content="AI, artificial intelligence, AI education, AI consulting, AI business applications">
+    <meta name="author" content="The AI Oldtimer">
     <title>The AI Oldtimer - Making AI Accessible for Everyone</title>
     <style>
         :root {
@@ -110,6 +113,26 @@
             background-color: #2980b9;
         }
 
+        .blog-section {
+            padding: 4rem 0;
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 2rem;
+        }
+
+        .blog-post {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
         footer {
             background-color: var(--primary-color);
             color: white;
@@ -145,44 +168,28 @@
         </div>
     </section>
 
-    <section class="container">
-        <div class="features">
-            <div class="feature">
-                <h3>Clear Explanations</h3>
-                <p>Complex AI concepts explained in simple, everyday language</p>
-            </div>
-            <div class="feature">
-                <h3>Practical Tips</h3>
-                <p>Real-world applications and advice for businesses and individuals</p>
-            </div>
-            <div class="feature">
-                <h3>Personal Journey</h3>
-                <p>Learning and growing together in the age of AI</p>
+    <section class="blog-section">
+        <h2>Latest Blog Posts</h2>
+        <div class="blog-posts">
+            <div class="blog-post">
+                <h3>Understanding AI Basics</h3>
+                <p>Breaking down AI concepts into simple, digestible pieces.</p>
+                <a href="blog.html">Read More</a>
             </div>
         </div>
-    </section>
-
-    <section class="booking-form">
-        <h3>Book an Appointment</h3>
-        <form action="https://formspree.io/f/mqaavvge" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-            <button type="submit">Send Request</button>
-        </form>
     </section>
 
     <section class="social-links container">
         <h3>Connect With Me</h3>
         <div>
             <a href="https://www.youtube.com/channel/UCUzwPDE4MBu6qmTazRT9UnQ" target="_blank">YouTube</a>
-            <a href="#">Blog</a>
+            <a href="blog.html">Blog</a>
             <a href="mailto:TheAIOldtimer@gmail.com">Contact</a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 The AI Oldtimer. All rights reserved.</p>
+        <p>&copy; 2024 The AI Oldtimer Ltd. All rights reserved.</p>
     </footer>
 </body>
 </html>
