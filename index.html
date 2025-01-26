@@ -2,70 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join the AI Oldtimer Waiting List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The AI Oldtimer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
+            background: url('https://files.oaiusercontent.com/file-7spXdCV81aPzVGsbH7mMgL?se=2025-01-26T17%3A51%3A16Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D6c231589-1203-4edb-9c3b-20cece21606d.webp&sig=YC%2Bc6Kt91f6Zv2ztr0XcoNubXnsSpZ37qTAaBN8MTV8%3D') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .logo {
+            max-width: 150px;
+            display: block;
+            margin: auto;
+        }
+        .hero {
             text-align: center;
-            padding: 50px 0;
+            padding: 3rem 0;
         }
-        .container {
-            width: 90%;
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
+        .hero img {
+            max-width: 300px;
             border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-        }
-        h1 {
-            font-size: 36px;
-            color: #333;
-        }
-        p {
-            font-size: 18px;
-            color: #666;
-        }
-        input[type="email"] {
-            padding: 12px;
-            width: 70%;
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            margin: 10px 0;
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            color: #888;
-        }
-        iframe {
-            width: 100%;
-            max-width: 560px;
-            height: 315px;
-            margin: 20px 0;
         }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Get Early Access to AI Oldtimer</h1>
-        <p>Join the waiting list to be the first to know when we launch exclusive AI content, courses, and consulting services!</p>
-        
-        <!-- YouTube Video Embed -->
-        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        <!-- Formspree Email Capture Form -->
-        <form action="https://formspree.io/f/your_form_endpoint" method="POST">
-            <input type="email" name="email" placeholder="Enter your email address" required>
-        </form>
-
-        <p class="footer">By signing up, you agree to our <a href="https://yourwebsite.com/privacy-policy">Privacy Policy</a>.</p>
-        <p>Check out my YouTube channel: <a href="https://www.youtube.com/@TheAIOldtimer" target="_blank">The AI Oldtimer</a></p>
-    </div>
-
+    <nav class="container-fluid">
+        <ul>
+            <li><strong>The AI Oldtimer</strong></li>
+        </ul>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact" role="button">Contact</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <div class="hero">
+            <img src="https://files.oaiusercontent.com/file-QkpQvQPETkajCPfTjFc4XX?se=2025-01-26T17%3A51%3A16Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dba79a12c-6925-4e52-8aeb-a788ba68ff73.webp&sig=Sr6UZyEsShNquF1DiYlyIKhUalFZHcnLDG0tWbJ89mM%3D" alt="AI Logo" class="logo">
+            <h2>Welcome to The AI Oldtimer</h2>
+            <p>Exploring AI with wisdom and experience. Join us to be a part of the future.</p>
+            <img src="https://files.oaiusercontent.com/file-Y8oxoEtDAxqb9DuzuqMHr1?se=2025-01-26T17%3A51%3A16Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D112fb34d-e074-483b-ab21-f524c718e2c9.webp&sig=PUGmkoUqQqyU3o/CX/QQjmGZLgUYcX4JaR6asLFhkfs%3D" alt="Wise AI Expert">
+        </div>
+    </main>
+    <section aria-label="Subscribe example">
+        <div class="container">
+            <article>
+                <hgroup>
+                    <h2>Stay Updated</h2>
+                    <h3>Sign up to receive updates on our AI agency</h3>
+                </hgroup>
+                <form class="grid">
+                    <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Your Name" required>
+                    <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
+                    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+                </form>
+            </article>
+        </div>
+    </section>
+    <footer class="container">
+        <small>
+            <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
+        </small>
+    </footer>
 </body>
 </html>
