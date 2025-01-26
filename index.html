@@ -8,20 +8,17 @@
     <style>
         /* Ensure background and images load on all devices */
         body {
-            background-image: url('https://files.oaiusercontent.com/file-7spXdCV81aPzVGsbH7mMgL');
+            background: url('https://files.oaiusercontent.com/file-7spXdCV81aPzVGsbH7mMgL?se=2025-01-26T17%3A51%3A16Z') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            color: white; /* Ensure all text is white */
+            color: white; /* ALL text is now pure white */
         }
 
-        /* Sticky navigation bar */
+        /* Sticky floating navbar */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.8); /* Slight transparency */
             padding: 0.5rem;
             z-index: 1000;
         }
@@ -35,7 +32,7 @@
             text-align: center;
             padding: 3rem 0;
             background: rgba(0, 0, 0, 0.8);
-            color: white; /* Force white text */
+            color: white;
             border-radius: 10px;
             margin: 2rem auto;
             width: 90%;
@@ -55,7 +52,7 @@
             line-height: 1.5;
         }
 
-        /* Email form section with contrasting background */
+        /* Email form with working submission */
         .subscribe-section {
             text-align: center;
             padding: 2rem;
@@ -91,7 +88,7 @@
         <div class="hero">
             <h2>Welcome to The AI Oldtimer</h2>
             <p>Exploring AI with wisdom and experience. Join us to be a part of the future.</p>
-            <img src="https://files.oaiusercontent.com/file-Y8oxoEtDAxqb9DuzuqMHr1" alt="Wise AI Expert">
+            <img src="https://files.oaiusercontent.com/file-Y8oxoEtDAxqb9DuzuqMHr1?se=2025-01-26T17%3A51%3A16Z" alt="Wise AI Expert">
         </div>
 
         <div id="about" class="about">
@@ -105,6 +102,7 @@
         </div>
     </main>
 
+    <!-- Working Email Form -->
     <section id="subscribe" class="subscribe-section">
         <div class="container">
             <article>
@@ -112,10 +110,11 @@
                     <h2>Stay Updated</h2>
                     <h3>Sign up to receive updates on our AI agency</h3>
                 </hgroup>
-                <form class="grid">
-                    <input type="text" id="firstname" name="firstname" placeholder="Your Name" aria-label="Your Name" required>
+                <form class="grid" action="https://formsubmit.co/theaioldtimer@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New AI Oldtimer Subscription!">
+                    <input type="text" id="firstname" name="name" placeholder="Your Name" aria-label="Your Name" required>
                     <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
-                    <button type="submit" onclick="event.preventDefault()">Subscribe</button>
+                    <button type="submit">Subscribe</button>
                 </form>
             </article>
         </div>
