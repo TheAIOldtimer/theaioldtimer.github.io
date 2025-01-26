@@ -15,12 +15,37 @@
             display: block;
             margin: auto;
         }
-        .hero {
+        .hero, .about, .video-section {
             text-align: center;
             padding: 3rem 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            border-radius: 10px;
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 800px;
         }
-        .hero img {
+        .hero img, .about img {
             max-width: 300px;
+            border-radius: 10px;
+        }
+        .about p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .subscribe-section {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 2rem auto;
+            width: 90%;
+            max-width: 600px;
+        }
+        iframe {
+            width: 100%;
+            max-width: 560px;
+            height: 315px;
             border-radius: 10px;
         }
     </style>
@@ -33,9 +58,10 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#contact" role="button">Contact</a></li>
+            <li><a href="#subscribe" role="button">Contact</a></li>
         </ul>
     </nav>
+
     <main class="container">
         <div class="hero">
             <img src="https://files.oaiusercontent.com/file-QkpQvQPETkajCPfTjFc4XX?se=2025-01-26T17%3A51%3A16Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dba79a12c-6925-4e52-8aeb-a788ba68ff73.webp&sig=Sr6UZyEsShNquF1DiYlyIKhUalFZHcnLDG0tWbJ89mM%3D" alt="AI Logo" class="logo">
@@ -43,8 +69,19 @@
             <p>Exploring AI with wisdom and experience. Join us to be a part of the future.</p>
             <img src="https://files.oaiusercontent.com/file-Y8oxoEtDAxqb9DuzuqMHr1?se=2025-01-26T17%3A51%3A16Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D112fb34d-e074-483b-ab21-f524c718e2c9.webp&sig=PUGmkoUqQqyU3o/CX/QQjmGZLgUYcX4JaR6asLFhkfs%3D" alt="Wise AI Expert">
         </div>
+
+        <div id="about" class="about">
+            <h2>About The AI Oldtimer</h2>
+            <p>The AI Oldtimer is a place where experience meets innovation. Our goal is to explore artificial intelligence, providing expert insights, discussions, and services to help businesses and individuals leverage AI for success. Whether you're a startup looking for AI solutions or an enthusiast eager to learn more, join us on this journey!</p>
+        </div>
+
+        <div class="video-section">
+            <h2>Watch Our Introductory Video</h2>
+            <iframe src="https://www.youtube.com/embed/fdtGNsxhc2w" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
     </main>
-    <section aria-label="Subscribe example">
+
+    <section id="subscribe" class="subscribe-section">
         <div class="container">
             <article>
                 <hgroup>
@@ -59,6 +96,7 @@
             </article>
         </div>
     </section>
+
     <footer class="container">
         <small>
             <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
