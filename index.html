@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The AI Oldtimer</title>
+    <!-- Added: Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://yourwebsite.com/favicon.ico"> <!-- Replace with your favicon URL -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <style>
         /* Ensure background and images load on all devices */
@@ -45,6 +47,8 @@
             border-radius: 10px;
             display: block;
             margin: auto;
+            /* Added: Lazy loading */
+            loading: lazy;
         }
 
         .about p {
@@ -69,6 +73,8 @@
             max-width: 560px;
             height: 315px;
             border-radius: 10px;
+            /* Added: Lazy loading */
+            loading: lazy;
         }
     </style>
 </head>
@@ -111,8 +117,13 @@
                     <h3>Sign up to receive updates on our AI agency</h3>
                 </hgroup>
                 <form class="grid" action="https://formsubmit.co/theaioldtimer@gmail.com" method="POST">
+                    <!-- Added: Redirect URL after form submission -->
+                    <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html"> <!-- Replace with your thank-you page URL -->
                     <input type="hidden" name="_subject" value="New AI Oldtimer Subscription!">
+                    <!-- Added: Labels for better accessibility -->
+                    <label for="firstname">Your Name</label>
                     <input type="text" id="firstname" name="name" placeholder="Your Name" aria-label="Your Name" required>
+                    <label for="email">Your Email</label>
                     <input type="email" id="email" name="email" placeholder="Your Email" aria-label="Your Email" required>
                     <button type="submit">Subscribe</button>
                 </form>
@@ -123,7 +134,8 @@
     <footer class="container">
         <small>
             &copy; 2025 The AI Oldtimer. All rights reserved.  
-            <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a>
+            <!-- Added: Actual URLs for Privacy Policy and Terms of Service -->
+            <a href="https://yourwebsite.com/privacy-policy.html">Privacy Policy</a> • <a href="https://yourwebsite.com/terms-of-service.html">Terms of Service</a>
         </small>
     </footer>
 </body>
