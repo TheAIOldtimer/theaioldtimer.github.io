@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The AI Oldtimer</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="container-fluid">
+    <nav>
         <ul>
             <li><strong>The AI Oldtimer</strong></li>
         </ul>
@@ -17,19 +17,33 @@
             <li><a href="quiz.html">Quiz</a></li>
         </ul>
     </nav>
-    <main class="container">
-        <section>
-            <h2>We are not currently taking on any more clients until May 1, 2025.</h2>
-            <p>However, please register your interest in the form below. If your needs are urgent, we will try and place you with one of our other companies we work with.</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/fdtGNsxhc2w" frameborder="0" allowfullscreen></iframe>
-            <form>
-                <label for="name">Your Name</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Your Email</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Register Interest</button>
-            </form>
-        </section>
-    </main>
+
+    <div class="container">
+        <h2>We are not currently taking on any more clients until May 1, 2025.</h2>
+        <p>However, please register your interest in the form below. If your needs are urgent, we will try and place you with one of our other companies we work with.</p>
+        
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/fdtGNsxhc2w" frameborder="0" allowfullscreen></iframe>
+
+        <h3>Register Your Interest</h3>
+        <form>
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="company">Company:</label>
+            <input type="text" id="company" name="company">
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <button type="submit">Register Interest</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2024 The AI Oldtimer. All rights reserved.
+    </footer>
 </body>
 </html>
