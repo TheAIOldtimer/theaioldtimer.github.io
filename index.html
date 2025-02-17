@@ -27,22 +27,49 @@
 
         <h3>Register Your Interest</h3>
 
-        <!-- Working Contact Form -->
-        <form action="https://formspree.io/f/mzzdkkyo" method="POST">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+<!-- Contact Form with Thank You Message -->
+<form id="contactForm" action="https://formspree.io/f/{your-form-id}" method="POST">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
 
-            <label for="company">Company:</label>
-            <input type="text" id="company" name="company">
+    <label for="company">Company:</label>
+    <input type="text" id="company" name="company">
 
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" required>
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
 
-            <label for="message">Your Message:</label>
-            <textarea id="message" name="message" rows="4"></textarea>
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
 
-            <button type="submit">Register Interest</button>
-        </form>
+    <button type="submit">Register Interest</button>
+</form>
+
+<!-- Thank You Message (Hidden by Default) -->
+<p id="thankYouMessage" style="display: none; color: green; font-weight: bold;">
+    Thank you for registering your interest! We will get back to you as soon as possible.
+</p>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    var form = this;
+    var thankYouMessage = document.getElementById("thankYouMessage");
+
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+            form.style.display = "none"; // Hide the form
+            thankYouMessage.style.display = "block"; // Show thank you message
+        } else {
+            alert("Oops! Something went wrong. Please try again.");
+        }
+    }).catch(error => alert("Oops! Something went wrong. Please try again."));
+});
+</script>
     </div>
 
     <footer>
