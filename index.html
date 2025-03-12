@@ -2,58 +2,83 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Growth Ebook for Estate Agents</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: justify; padding: 50px; }
-        .container { max-width: 700px; margin: auto; }
-        img { width: 100%; max-width: 400px; margin-bottom: 20px; display: block; margin-left: auto; margin-right: auto; }
-        .btn { display: inline-block; background: #007bff; color: #fff; padding: 15px 20px; 
-               text-decoration: none; border: none; border-radius: 5px; font-size: 18px; cursor: pointer; 
-               display: block; margin: 20px auto; text-align: center; }
-        .btn:hover { background: #0056b3; }
-        .text-center { text-align: center; }
-        .form-container { max-width: 500px; margin: 40px auto; text-align: center; }
-        input, textarea { width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-        button { background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
-        button:hover { background: #218838; }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The AI Oldtimer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 style="text-align: center;">Unlock the Power of AI for Your Estate Agency</h1>
-        
-        <p><strong>Are you ready to transform your real estate business?</strong></p>
-        <p>Discover how AI can help you generate more leads, close deals faster, and stay ahead of the competition. 
-        This free guide is packed with insights and strategies tailored for estate agents looking to leverage AI for growth.</p>
-        
-        <a href="https://github.com/TheAIOldtimer/theaioldtimer.github.io/raw/main/Estate%20Agent%20AI%20Ebook.pdf" download>
-            <img src="estate-agents-ebook-cover.png" alt="AI Growth Ebook Cover">
-        </a>
-        
-        <h2>What You'll Learn:</h2>
-        <ul style="text-align: left; display: inline-block;">
-            <li>How AI can automate lead generation and client follow-ups.</li>
-            <li>The best AI tools for property valuation and market analysis.</li>
-            <li>How chatbots and virtual assistants can improve customer service.</li>
-            <li>Ways AI-driven marketing can boost your sales conversions.</li>
-        </ul>
-        
-        <p class="text-center">Don’t miss out on this opportunity to future-proof your estate agency.<br>
-        Click below to get your free copy now.</p>
-        
-        <a href="https://github.com/TheAIOldtimer/theaioldtimer.github.io/raw/main/Estate%20Agent%20AI%20Ebook.pdf" class="btn" download>Download the Ebook</a>
+    <nav>
+    <ul>
+        <li>
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
+                <img src="TAO-logo.jpg" alt="The AI Oldtimer Logo" style="height: 50px; margin-right: 10px;">
+                <strong style="font-size: 1.2em;">The AI Oldtimer</strong>
+            </a>
+        </li>
+    </ul>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="book.html">Book</a></li>
+    </ul>
+</nav>
 
-        <div class="form-container">
-            <h2>Get in Touch</h2>
-            <p>Have questions or want to learn more about AI for estate agents? Fill out the form below.</p>
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-                <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
-                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+    <div class="container">
+        <h2>In order to maintain the high quality of service our clients deserve, we are not actively taking on any more clients until May 1, 2025. We apologise for any inconvenience caused.</h2>
+        
+        <!-- Embedded YouTube Video -->
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/fdtGNsxhc2w" frameborder="0" allowfullscreen></iframe>
+
+        <p>However, please register your interest in the form below, and we will add you to our waiting list. If your needs are urgent, we will try and place you with one of our other companies we work with. If you are new to AI and just curious, please hit the BOOK tab above and read our latest publication for people new to the field of AI.</p>
+
+        <h3>Register Your Interest</h3>
+
+<!-- Contact Form with Thank You Message -->
+<form id="contactForm" action="https://formspree.io/f/mvgkogkd" method="POST">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="company">Company:</label>
+    <input type="text" id="company" name="company">
+
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="message">Your Message:</label>
+    <textarea id="message" name="message" rows="4"></textarea>
+
+    <button type="submit">Register Interest</button>
+</form>
+
+<!-- Thank You Message (Hidden by Default) -->
+<p id="thankYouMessage" style="display: none; color: green; font-weight: bold;">
+    Thank you for registering your interest! We will get back to you as soon as possible.
+</p>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    var form = this;
+    var thankYouMessage = document.getElementById("thankYouMessage");
+
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+    }).then(response => {
+        if (response.ok) {
+            form.style.display = "none"; // Hide the form
+            thankYouMessage.style.display = "block"; // Show thank you message
+        } else {
+            alert("Oops! Something went wrong. Please try again.");
+        }
+    }).catch(error => alert("Oops! Something went wrong. Please try again."));
+});
+</script>
     </div>
+
+    <footer>
+        &copy; 2025 The AI Oldtimer Limited. All rights reserved.
+    </footer>
 </body>
 </html>
